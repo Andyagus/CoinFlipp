@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{1B126BD9-06B1-8636-4DCE-CCE2E786EC01}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ButtonHandler.cs">
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="55" Y="27" Width="1196" Height="851">
+        <Files>
+          <File FileName="Assets/Scripts/CoinFlip.cs" Line="74" Column="89" />
+          <File FileName="Assets/Scripts/ButtonHandler.cs" Line="7" Column="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bd876dd3-c57b-4e1d-b3a0-61a01ed401ff" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
