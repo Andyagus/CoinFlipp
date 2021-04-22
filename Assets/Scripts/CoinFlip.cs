@@ -85,7 +85,6 @@ public class CoinFlip : MonoBehaviour
                 GameObject newObject = Instantiate(greenPanel);
 
                 newObject.GetComponent<RectTransform>().SetParent(parentPanel.transform);
-                //newObject.transform.localPosition = new Vector3(0, spriteLocation, 0);
 
 
             }
@@ -110,7 +109,6 @@ public class CoinFlip : MonoBehaviour
 
                 newObject.GetComponent<RectTransform>().SetParent(parentPanel.transform);
                 newObject.transform.localPosition = new Vector3(0, spriteLocation, 0);
-
 
             }
         }

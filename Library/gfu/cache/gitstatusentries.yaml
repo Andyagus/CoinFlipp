@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2021-04-21T21:39:09.096-04:00
+  lastUpdatedAtString: 2021-04-21T22:07:57.360-04:00
   initializedAtString: 2021-04-21T20:55:51.925-04:00
   entries:
   - path: Assets/Scenes/Scene2.unity
@@ -22,21 +22,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Assets/TestTask_UnityIntern_Resources/T_ui_box_white.png.meta
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Assets/TestTask_UnityIntern_Resources/T_ui_box_white.png.meta
-    projectPath: Assets/TestTask_UnityIntern_Resources/T_ui_box_white.png.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue.png.meta
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue.png.meta
-    projectPath: Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue.png.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue_shadow.png.meta
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue_shadow.png.meta
-    projectPath: Assets/TestTask_UnityIntern_Resources/T_ui_panel_blue_shadow.png.meta
+  - path: Assets/Scripts/CoinFlip.cs
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Assets/Scripts/CoinFlip.cs
+    projectPath: Assets/Scripts/CoinFlip.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -46,39 +34,45 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/Artifacts/28/2808ed2b67bf837c4fab9b520f76c735
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/28/2808ed2b67bf837c4fab9b520f76c735
-    projectPath: Library/Artifacts/28/2808ed2b67bf837c4fab9b520f76c735
+  - path: Library/Artifacts/5e/5ea3a462cc1a30e0860ec249e20e70c4
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/5e/5ea3a462cc1a30e0860ec249e20e70c4
+    projectPath: Library/Artifacts/5e/5ea3a462cc1a30e0860ec249e20e70c4
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/66/660bd4b9d0b4aa2ca8a36d5cdf57933a
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/66/660bd4b9d0b4aa2ca8a36d5cdf57933a
-    projectPath: Library/Artifacts/66/660bd4b9d0b4aa2ca8a36d5cdf57933a
+  - path: Library/Artifacts/61/617d5bd7d13b13f105b8e355b4db52c0
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/61/617d5bd7d13b13f105b8e355b4db52c0
+    projectPath: Library/Artifacts/61/617d5bd7d13b13f105b8e355b4db52c0
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/82/8218fb070b999fff35430810784c6173
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/82/8218fb070b999fff35430810784c6173
-    projectPath: Library/Artifacts/82/8218fb070b999fff35430810784c6173
+  - path: Library/Artifacts/a4/a4f20f1e7e62a44475a3e377de91fc46
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/a4/a4f20f1e7e62a44475a3e377de91fc46
+    projectPath: Library/Artifacts/a4/a4f20f1e7e62a44475a3e377de91fc46
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/b6/b6b3a10122eafdbdbaed257081be94e6
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/b6/b6b3a10122eafdbdbaed257081be94e6
-    projectPath: Library/Artifacts/b6/b6b3a10122eafdbdbaed257081be94e6
+  - path: Library/Artifacts/ae/aec034fdf229eb81fb7aa50d647029b8
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/ae/aec034fdf229eb81fb7aa50d647029b8
+    projectPath: Library/Artifacts/ae/aec034fdf229eb81fb7aa50d647029b8
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/c7/c7cf566cd7fe7e9b74494dadf2edc6e3
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/c7/c7cf566cd7fe7e9b74494dadf2edc6e3
-    projectPath: Library/Artifacts/c7/c7cf566cd7fe7e9b74494dadf2edc6e3
+  - path: Library/Artifacts/db/db1c18b4c29bef4698a4b93aa9e9438e
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/db/db1c18b4c29bef4698a4b93aa9e9438e
+    projectPath: Library/Artifacts/db/db1c18b4c29bef4698a4b93aa9e9438e
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/d7/d72b92d6440706538e699a28b29adb81
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/d7/d72b92d6440706538e699a28b29adb81
-    projectPath: Library/Artifacts/d7/d72b92d6440706538e699a28b29adb81
+  - path: Library/Artifacts/e9/e9ee7ab96f5b99a0bc8193204ebac756
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/e9/e9ee7ab96f5b99a0bc8193204ebac756
+    projectPath: Library/Artifacts/e9/e9ee7ab96f5b99a0bc8193204ebac756
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library/Artifacts/f4/f49e33a41bd1d5d624670af14cb64d12
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/Artifacts/f4/f49e33a41bd1d5d624670af14cb64d12
+    projectPath: Library/Artifacts/f4/f49e33a41bd1d5d624670af14cb64d12
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -88,12 +82,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/gfu/cache/branches.yaml
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/gfu/cache/branches.yaml
-    projectPath: Library/gfu/cache/branches.yaml
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library/gfu/cache/gitlocks.yaml
     fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/gfu/cache/gitlocks.yaml
     projectPath: Library/gfu/cache/gitlocks.yaml
@@ -104,8 +92,8 @@ MonoBehaviour:
     fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/gfu/cache/gitlog.yaml
     projectPath: Library/gfu/cache/gitlog.yaml
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library/gfu/cache/gitstatusentries.yaml
     fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/gfu/cache/gitstatusentries.yaml
     projectPath: Library/gfu/cache/gitstatusentries.yaml
@@ -118,39 +106,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/gfu/cache/gituser.yaml
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/gfu/cache/gituser.yaml
-    projectPath: Library/gfu/cache/gituser.yaml
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library/ShaderCache/a/ae60d9ef0024269bbdcc399a45d15fc7.bin
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/ShaderCache/a/ae60d9ef0024269bbdcc399a45d15fc7.bin
-    projectPath: Library/ShaderCache/a/ae60d9ef0024269bbdcc399a45d15fc7.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library/ShaderCache/c/ce8e99423dc802c30fa022888f9d8080.bin
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/ShaderCache/c/ce8e99423dc802c30fa022888f9d8080.bin
-    projectPath: Library/ShaderCache/c/ce8e99423dc802c30fa022888f9d8080.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library/ShaderCache/EditorEncounteredVariants
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/ShaderCache/EditorEncounteredVariants
-    projectPath: Library/ShaderCache/EditorEncounteredVariants
+  - path: Library/ScriptAssemblies/Assembly-CSharp.dll
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/ScriptAssemblies/Assembly-CSharp.dll
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/shadercompiler-UnityShaderCompiler1.log
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/shadercompiler-UnityShaderCompiler1.log
-    projectPath: Library/shadercompiler-UnityShaderCompiler1.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library/shadercompiler-UnityShaderCompiler3.log
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/shadercompiler-UnityShaderCompiler3.log
-    projectPath: Library/shadercompiler-UnityShaderCompiler3.log
+  - path: Library/ScriptAssemblies/Assembly-CSharp.pdb
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/ScriptAssemblies/Assembly-CSharp.pdb
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.pdb
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -172,15 +136,51 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/UIElements/EditorWindows/UnityEditor.PackageManager.UI.PackageManagerWindow.pref
-    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Library/UIElements/EditorWindows/UnityEditor.PackageManager.UI.PackageManagerWindow.pref
-    projectPath: Library/UIElements/EditorWindows/UnityEditor.PackageManager.UI.PackageManagerWindow.pref
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Temp/__Backupscenes/0.backup
     fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/__Backupscenes/0.backup
     projectPath: Temp/__Backupscenes/0.backup
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Temp/UnityTempFile-115b6ae5aac5c42f1a71b86bf07f7d57
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-115b6ae5aac5c42f1a71b86bf07f7d57
+    projectPath: Temp/UnityTempFile-115b6ae5aac5c42f1a71b86bf07f7d57
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-2d8e2f69ab4154ec8b042489af06723d
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-2d8e2f69ab4154ec8b042489af06723d
+    projectPath: Temp/UnityTempFile-2d8e2f69ab4154ec8b042489af06723d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-58d9025a320fb46888059873e5f130af
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-58d9025a320fb46888059873e5f130af
+    projectPath: Temp/UnityTempFile-58d9025a320fb46888059873e5f130af
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-b4a297a77e16045bb81f137e20535b71
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-b4a297a77e16045bb81f137e20535b71
+    projectPath: Temp/UnityTempFile-b4a297a77e16045bb81f137e20535b71
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-bcae75f4c6bea47608f1a661c97464dc
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-bcae75f4c6bea47608f1a661c97464dc
+    projectPath: Temp/UnityTempFile-bcae75f4c6bea47608f1a661c97464dc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-d13b6de23bcb246659a18ab929d63e79
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-d13b6de23bcb246659a18ab929d63e79
+    projectPath: Temp/UnityTempFile-d13b6de23bcb246659a18ab929d63e79
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-f51f6143e16534811a8a4a517a61fb11
+    fullPath: /Users/AndyXcode/Desktop/bullyAna/CoinFlipGame/Temp/UnityTempFile-f51f6143e16534811a8a4a517a61fb11
+    projectPath: Temp/UnityTempFile-f51f6143e16534811a8a4a517a61fb11
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
