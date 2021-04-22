@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{1B126BD9-06B1-8636-4DCE-CCE2E786EC01}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ButtonHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CoinFlip.cs">
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="45" Y="23" Width="1395" Height="417">
+      <FloatingWindow WindowId="1" X="1440" Y="23" Width="1196" Height="851">
         <Files>
-          <File FileName="Assets/Scripts/CoinFlip.cs" Line="74" Column="54" />
-          <File FileName="Assets/Scripts/ButtonHandler.cs" Line="6" Column="1" />
+          <File FileName="Assets/Scripts/CoinFlip.cs" Line="32" Column="10" />
+          <File FileName="Assets/Scripts/ButtonHandler.cs" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4af7fc88-df0f-4f25-9c5b-d1983126e7a8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d4cd8bb1-f296-4349-b753-260dcf3bf92d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

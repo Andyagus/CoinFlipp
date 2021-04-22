@@ -27,7 +27,7 @@ public class CoinFlip : MonoBehaviour
     public Sprite tails;
 
 
-    public int spriteLocation = 1;
+    //public int spriteLocation = 1;
 
     private void Start()
     {
@@ -42,7 +42,6 @@ public class CoinFlip : MonoBehaviour
     }
     public void CloseList()
     {
-        Debug.Log("NAh");
         scrollView.SetActive(false);
         bgBlur.SetActive(false);
         //zamerican = parentPanel.transform.Find("content");
@@ -55,6 +54,7 @@ public class CoinFlip : MonoBehaviour
 
     public void CheckList()
     {
+
         Debug.Log(buttonHandlerScript.turnsList.Count);
         scrollView.SetActive(true);
         bgBlur.SetActive(true);
@@ -63,13 +63,19 @@ public class CoinFlip : MonoBehaviour
         int i = 0;
         foreach (var item in buttonHandlerScript.turnsList) {
             i++;
-            Debug.Log(buttonHandlerScript.turnsList);
+
+
+            //GameObject newObja = Instantiate(greenPanel);
+            //newObja.GetComponent<RectTransform>().SetParent(parentPanel.transform);
+
+
+
             if (item.bet == item.cameUp)
             {
 
                 scoreText1.text = ("#" + i);
 
-                if(item.bet == "tails")
+                if (item.bet == "tails")
                 {
                     betImageComponent.sprite = tails;
                     cameUpImageComponent.sprite = tails;
@@ -86,9 +92,10 @@ public class CoinFlip : MonoBehaviour
 
                 newObject.GetComponent<RectTransform>().SetParent(parentPanel.transform);
 
+                //newObject.transform(new Vector2(0, 0, 0));
 
             }
-            else if(item.bet != item.cameUp)
+            else if (item.bet != item.cameUp)
             {
                 scoreText2.text = ("#" + i);
 
@@ -108,7 +115,7 @@ public class CoinFlip : MonoBehaviour
                 GameObject newObject = Instantiate(redPanel);
 
                 newObject.GetComponent<RectTransform>().SetParent(parentPanel.transform);
-                newObject.transform.localPosition = new Vector3(0, spriteLocation, 0);
+                //newObject.transform.localPosition = new Vector3(0, spriteLocation, 0);
 
             }
         }
