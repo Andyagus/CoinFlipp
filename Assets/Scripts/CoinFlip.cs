@@ -31,9 +31,9 @@ public class CoinFlip : MonoBehaviour
 
     private void Start()
     {
-        GameObject buttonScript = GameObject.Find("GameObject");
+        GameObject buttonScript = GameObject.Find("ButtonHandler");
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
-        
+        Debug.Log(buttonHandlerScript);
     }
 
     public void Update()
