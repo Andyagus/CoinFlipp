@@ -17,11 +17,10 @@ public class ButtonHandler : MonoBehaviour
     public List<Turn> turnsList = new List<Turn>();
    
 
-    public class Turn{
-
-        public string bet;
-        public string cameUp; 
-        
+    public struct Turn{
+        //make booleans
+        public bool bet;
+        public bool cameUp; 
 
     }
 
@@ -29,90 +28,51 @@ public class ButtonHandler : MonoBehaviour
     void UpdateScore(int scoreToAdd)
     {
         gameScore += scoreToAdd;
-        scoreText.text = ""+gameScore;
+        scoreText.text = ($"{gameScore}"); 
     }
 
-    void FlipCoin(string guess)
+    void FlipCoin(bool guess)
     {
         bool randomSide = (Random.value > 0.5f);
         lostAlert.SetActive(false);
         wonAlert.SetActive(false);
+        (guess == true ? headsCoin : tailsCoin).SetActive(true);
+        (guess == false ? headsCoin : tailsCoin).SetActive(false);
 
-        if (guess== "tails")
+        var correct = guess == randomSide;
+
+        Turn turn = new Turn
         {
-            if(randomSide == false)
-            {
-                UpdateScore(scoreToAdd: 100);
-                tailsCoin.SetActive(true);
-                headsCoin.SetActive(false);
-                wonAlert.SetActive(true);
-                Debug.Log("You won! Bet: Tails/ Came up Tails");
-                Turn turn1 = new Turn();
-                turn1.bet = "tails";
-                turn1.cameUp = "tails";
-                turnsList.Add(turn1);
-          
-            }
-            else
-            {
-                UpdateScore(scoreToAdd: -100);
-                tailsCoin.SetActive(false);
-                headsCoin.SetActive(true);
-                lostAlert.SetActive(true);
-                Debug.Log("You Lost! Bet: Tails/ Came up Heads");
-                Turn turn1 = new Turn();
-                turn1.bet = "tails";
-                turn1.cameUp = "heads";
-                turnsList.Add(turn1);
+            bet = guess ? true : false,
+            cameUp = randomSide ? true : false,
 
+        };
 
-            }
+        turnsList.Add(turn);
+
+        if (correct)
+        {
+            UpdateScore(scoreToAdd: 100);
+            wonAlert.SetActive(true);
         }
-
-        if(guess == "heads")
+        else
         {
-            Debug.Log("heads");
-            if(randomSide == true)
-            {
-                UpdateScore(scoreToAdd: 100);
-                Debug.Log("You clicked: Heads - RIGHT! + 100");
-                wonAlert.SetActive(true);
-                headsCoin.SetActive(true);
-                tailsCoin.SetActive(false);
-                Turn turn1 = new Turn();
-                turn1.bet = "heads";
-                turn1.cameUp = "heads";
-                turnsList.Add(turn1);
+            UpdateScore(scoreToAdd: -100);
+            lostAlert.SetActive(true);
 
-
-            }
-            else
-            {
-                UpdateScore(scoreToAdd: -100);
-                Debug.Log("You clicked Heads: WRONG! -100");
-                lostAlert.SetActive(true);
-                tailsCoin.SetActive(true);
-                headsCoin.SetActive(false);
-                Turn turn1 = new Turn();
-                turn1.bet = "heads";
-                turn1.cameUp = "tails";
-                turnsList.Add(turn1);
-            }
-        }       
-
+        }
     }
 
-   
+    public void headsClick()
+    {
+        FlipCoin(guess: true);
+    }
+
     public void tailsClick()
     {
-        FlipCoin(guess: "tails");
+        FlipCoin(guess: false);
     }
-
-    public void headClick()
-    {
-        FlipCoin(guess: "heads");
-    }
-
 
 
 }
+

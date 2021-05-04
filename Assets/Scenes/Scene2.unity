@@ -2913,7 +2913,7 @@ RectTransform:
   - {fileID: 1861359329}
   - {fileID: 1122192751}
   m_Father: {fileID: 1627332524}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2964,7 +2964,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1758863559}
-        m_MethodName: headClick
+        m_MethodName: headsClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3044,7 +3044,7 @@ RectTransform:
   - {fileID: 1349024535}
   - {fileID: 262990813}
   m_Father: {fileID: 1627332524}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4229,8 +4229,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1758863558}
-  - {fileID: 1198568177}
   - {fileID: 1150968526}
+  - {fileID: 1198568177}
   - {fileID: 1945016436}
   - {fileID: 648637992}
   - {fileID: 2040132266}

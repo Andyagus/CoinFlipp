@@ -75,13 +75,13 @@ public class CoinFlip : MonoBehaviour
 
                 scoreText1.text = ("#" + i);
 
-                if (item.bet == "tails")
+                if (item.bet == false)
                 {
                     betImageComponent.sprite = tails;
                     cameUpImageComponent.sprite = tails;
 
                 }
-                if (item.bet == "heads")
+                if (item.bet == true)
                 {
                     betImageComponent.sprite = heads;
                     cameUpImageComponent.sprite = heads;
@@ -99,13 +99,13 @@ public class CoinFlip : MonoBehaviour
             {
                 scoreText2.text = ("#" + i);
 
-                if (item.bet == "tails")
+                if (item.bet == false)
                 {
                     betImageComponentRed.sprite = tails;
                     cameUpImageComponentRed.sprite = heads;
 
                 }
-                if (item.bet == "heads")
+                if (item.bet == true)
                 {
                     betImageComponentRed.sprite = heads;
                     cameUpImageComponentRed.sprite = tails;
