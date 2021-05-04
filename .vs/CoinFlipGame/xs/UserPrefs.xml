@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{1B126BD9-06B1-8636-4DCE-CCE2E786EC01}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CoinFlip.cs">
     <Files>
-      <File FileName="Assets/Scripts/ButtonHandler.cs" Line="65" Column="6" />
-      <File FileName="Assets/Scripts/CoinFlip.cs" Line="83" Column="18" />
+      <File FileName="Assets/Scripts/CoinFlip.cs" Line="29" Column="17" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="3360" Y="23" Width="1020" Height="719">
+        <Files>
+          <File FileName="Assets/Scripts/ButtonHandler.cs" Line="50" Column="45" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

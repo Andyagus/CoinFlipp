@@ -14,24 +14,17 @@ public class ButtonHandler : MonoBehaviour
     [SerializeField] float gameScore;
     [SerializeField] TextMeshProUGUI scoreText;
     //unable to make field readonly since it's being accesed from the pause controller - discuss with eugene a different approach 
-    public List<Turn> turnsList = new List<Turn>();
-   
-
-    public struct Turn{
-        //make booleans
-        public bool bet;
-        public bool cameUp; 
-
-    }
+    public List<Turn> turnsList = new List<Turn>(128);
+    private int scoreToAdd = 100;
 
 
-    void UpdateScore(int scoreToAdd)
+    public struct Turn
     {
-        gameScore += scoreToAdd;
-        scoreText.text = ($"{gameScore}"); 
+        public bool bet;
+        public bool cameUp;
     }
 
-    void FlipCoin(bool guess)
+    public void FlipCoin(bool guess)
     {
         bool randomSide = (Random.value > 0.5f);
         lostAlert.SetActive(false);
@@ -52,27 +45,17 @@ public class ButtonHandler : MonoBehaviour
 
         if (correct)
         {
-            UpdateScore(scoreToAdd: 100);
             wonAlert.SetActive(true);
+            gameScore += scoreToAdd;
+            scoreText.text = ($"{gameScore}");
         }
         else
         {
-            UpdateScore(scoreToAdd: -100);
             lostAlert.SetActive(true);
-
+            gameScore -= scoreToAdd;
+            scoreText.text = ($"{gameScore}");
         }
     }
-
-    public void headsClick()
-    {
-        FlipCoin(guess: true);
-    }
-
-    public void tailsClick()
-    {
-        FlipCoin(guess: false);
-    }
-
 
 }
 

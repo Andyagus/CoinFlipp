@@ -2408,23 +2408,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandlerScript: {fileID: 1758863559}
-  badSprite: {fileID: 21300000, guid: fcb48ec3b007d4b739804952cc799e8f, type: 3}
-  goodSprite: {fileID: 0}
-  contentPanel: {fileID: 2105626283}
   parentPanel: {fileID: 2105626283}
-  greenPanel: {fileID: 2137725078}
-  redPanel: {fileID: 332851210}
+  panel: {fileID: 2137725078}
+  bgBlur: {fileID: 48885141}
   scrollView: {fileID: 1543593516}
   scoreText1: {fileID: 751400907}
-  scoreText2: {fileID: 1103073108}
   betImageComponent: {fileID: 176038636}
   cameUpImageComponent: {fileID: 892126677}
-  betImageComponentRed: {fileID: 1621228328}
-  cameUpImageComponentRed: {fileID: 1994329722}
-  bgBlur: {fileID: 48885141}
   newImageSprite: {fileID: 21300000, guid: 29cff3bf78ad648d98b3bcb4048a97db, type: 3}
-  heads: {fileID: 21300000, guid: c4927f44e6a5e4384a16ca1645cf502b, type: 3}
-  tails: {fileID: 21300000, guid: facd323366a094b48b4a7a9af6a0cc66, type: 3}
+  headsSprite: {fileID: 0}
+  tailsSprite: {fileID: 0}
+  redPanel: {fileID: 21300000, guid: 265dda655246c4d478d40ee9f3f78618, type: 3}
+  greenPanel: {fileID: 21300000, guid: 9a9c3214c968f4881ab3b9257627bec6, type: 3}
 --- !u!114 &911714928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,7 +2464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 911714927}
-        m_MethodName: CheckList
+        m_MethodName: PopulateList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2964,15 +2959,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1758863559}
-        m_MethodName: headsClick
-        m_Mode: 1
+        m_MethodName: FlipCoin
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1150968528
 MonoBehaviour:
@@ -3132,8 +3127,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1758863559}
-        m_MethodName: tailsClick
-        m_Mode: 1
+        m_MethodName: FlipCoin
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4447,7 +4442,7 @@ GameObject:
   - component: {fileID: 1758863559}
   m_Layer: 5
   m_Name: ButtonHandler
-  m_TagString: Untagged
+  m_TagString: ButtonHandler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5273,7 +5268,7 @@ GameObject:
   - component: {fileID: 2137725081}
   - component: {fileID: 2137725080}
   m_Layer: 5
-  m_Name: greenPanel
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
