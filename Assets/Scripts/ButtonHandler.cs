@@ -17,8 +17,6 @@ public class ButtonHandler : MonoBehaviour
     public List<Turn> turnsList = new List<Turn>(128);
     private int scoreToAdd = 100;
 
-
-
     public struct Turn
     {
         public bool bet;
@@ -41,7 +39,8 @@ public class ButtonHandler : MonoBehaviour
             cameUp = randomSide ? true : false,
 
         };
-
+        Debug.Log(turn.bet);
+        Debug.Log(turn.cameUp);
         turnsList.Add(turn);
 
         if (correct)
