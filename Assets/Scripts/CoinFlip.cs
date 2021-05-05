@@ -26,10 +26,8 @@ public class CoinFlip : MonoBehaviour
     {
         panelImage = panel.GetComponent<Image>();
         var buttonScript = GameObject.FindGameObjectWithTag("ButtonHandler");
-        //cache this 
+        //cache this//
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
-
-
     }
 
     public void CloseList()
