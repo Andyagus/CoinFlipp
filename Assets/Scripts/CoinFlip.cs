@@ -42,7 +42,7 @@ public class CoinFlip : MonoBehaviour
         }
     }
 
-    public void PopulateList()
+    public void ListPopulate()
     {
         scrollView.SetActive(true);
         bgBlur.SetActive(true);

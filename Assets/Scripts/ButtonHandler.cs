@@ -18,6 +18,7 @@ public class ButtonHandler : MonoBehaviour
     private int scoreToAdd = 100;
 
 
+
     public struct Turn
     {
         public bool bet;
