@@ -5,8 +5,7 @@ using TMPro;
 using UnityEngine;
 public class CoinFlip : MonoBehaviour
 {
-    
-    //all of these are serialize field nothing is private 
+
     public ButtonHandler buttonHandlerScript;
     [SerializeField] GameObject parentPanel;
     [SerializeField] GameObject panel;
@@ -26,9 +25,10 @@ public class CoinFlip : MonoBehaviour
     {
         panelImage = panel.GetComponent<Image>();
         var buttonScript = GameObject.FindGameObjectWithTag("ButtonHandler");
-        //cache this//
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
+
     }
+
 
     public void CloseList()
     {
