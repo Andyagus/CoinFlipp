@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,8 +55,27 @@ public class ObjectPooler : MonoBehaviour
         objectToSpawn.transform.rotation = rotation;
 
         poolDictionary[tag].Enqueue(objectToSpawn);
-
+    
         return objectToSpawn;
+    }
+
+    internal void SetActive(bool v)
+    {
+        throw new NotImplementedException();
+    }
+
+    public GameObject ReturnToPool(string tag, Vector3 position, Quaternion rotation)
+    {
+        GameObject objectToReturn = poolDictionary[tag].Dequeue();
+        objectToReturn.SetActive(false);
+        objectToReturn.transform.position = position;
+        objectToReturn.transform.rotation = rotation;
+
+        poolDictionary[tag].Enqueue(objectToReturn);
+
+        return objectToReturn;
+
+
     }
 
 }

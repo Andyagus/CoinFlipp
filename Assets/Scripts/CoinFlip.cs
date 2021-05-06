@@ -28,23 +28,24 @@ public class CoinFlip : MonoBehaviour
         panelImage = panel.GetComponent<Image>();
         var buttonScript = GameObject.FindGameObjectWithTag("ButtonHandler");
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
-        objectPooler = ObjectPooler.Instance;
     }
 
 
     public void CloseList()
     {
         scrollView.SetActive(false);
-        bgBlur.SetActive(false); 
-        //foreach (GameObject child in parentPanel.transform)
-        //{
-        //     child.SetActive(false);
-        //}
+        bgBlur.SetActive(false);
+        //ObjectPooler.Instance.SetActive(false);
+        //ObjectPooler.Instance.ReturnToPool("green", transform.position, Quaternion.identity);
+
+        //Debug.Log(parentPanel);
+        
+
+
 
     }
 
     public void ListPopulate()
-        //this is the spawner here 
     {
         scrollView.SetActive(true);
         bgBlur.SetActive(true);
@@ -60,15 +61,17 @@ public class CoinFlip : MonoBehaviour
             //GameObject newObject = Instantiate(panel);
             //newObject.transform.SetParent(parentPanel.transform);
 
-                var obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red" , parentPanel.transform.position, Quaternion.identity);
-                var betSide = obj.transform.GetChild(0);
+                var obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
                 var cameUpSide = obj.transform.GetChild(1);
+                var betSide = obj.transform.GetChild(0);
                 obj.transform.SetParent(parentPanel.transform);
                 betSide.GetChild(turnsList[i].bet == true ? 0 : 1).gameObject.SetActive(true);
                 cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);
-
             
-
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    obj.SetActive(false);
+            //}
             //var headCoin = betSideCoin.GetChild(0);
         }
 
