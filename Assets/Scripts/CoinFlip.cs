@@ -22,7 +22,6 @@ public class CoinFlip : MonoBehaviour
     [SerializeField] Sprite greenPanel;
     ObjectPooler objectPooler;
 
-
     private void Start()
     {
         panelImage = panel.GetComponent<Image>();
@@ -30,19 +29,12 @@ public class CoinFlip : MonoBehaviour
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
     }
 
-
     public void CloseList()
     {
         scrollView.SetActive(false);
         bgBlur.SetActive(false);
         //ObjectPooler.Instance.SetActive(false);
         //ObjectPooler.Instance.ReturnToPool("green", transform.position, Quaternion.identity);
-
-        //Debug.Log(parentPanel);
-        
-
-
-
     }
 
     public void ListPopulate()
@@ -56,23 +48,12 @@ public class CoinFlip : MonoBehaviour
             scoreText1.text = ($"#{i+1}");
             var correct = turnsList[i].bet == turnsList[i].cameUp;
             panelImage.sprite = (correct ? greenPanel : redPanel);
-            //betImageComponent.sprite = turnsList[i].bet == true ? headsSprite : tailsSprite;
-            //cameUpImageComponent.sprite = turnsList[i].cameUp == true ? headsSprite : tailsSprite ;
-            //GameObject newObject = Instantiate(panel);
-            //newObject.transform.SetParent(parentPanel.transform);
-
-                var obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
-                var cameUpSide = obj.transform.GetChild(1);
-                var betSide = obj.transform.GetChild(0);
-                obj.transform.SetParent(parentPanel.transform);
-                betSide.GetChild(turnsList[i].bet == true ? 0 : 1).gameObject.SetActive(true);
-                cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);
-            
-            //if (Input.GetMouseButtonDown(0))
-            //{
-            //    obj.SetActive(false);
-            //}
-            //var headCoin = betSideCoin.GetChild(0);
+            var obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
+            var cameUpSide = obj.transform.GetChild(1);
+            var betSide = obj.transform.GetChild(0);
+            obj.transform.SetParent(parentPanel.transform);
+            betSide.GetChild(turnsList[i].bet == true ? 0 : 1).gameObject.SetActive(true);
+            cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);  
         }
 
     }

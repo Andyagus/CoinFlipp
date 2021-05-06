@@ -53,8 +53,6 @@ public class ObjectPooler : MonoBehaviour
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
-
-        poolDictionary[tag].Enqueue(objectToSpawn);
     
         return objectToSpawn;
     }
@@ -64,18 +62,16 @@ public class ObjectPooler : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    public GameObject ReturnToPool(string tag, Vector3 position, Quaternion rotation)
-    {
-        GameObject objectToReturn = poolDictionary[tag].Dequeue();
-        objectToReturn.SetActive(false);
-        objectToReturn.transform.position = position;
-        objectToReturn.transform.rotation = rotation;
+    //public GameObject ReturnToPool(string tag, Vector3 position, Quaternion rotation)
+    //{
+    //    GameObject objectToReturn = poolDictionary[tag].Enqueue(objectToReturn);
+    //    objectToReturn.SetActive(false);
+    //    objectToReturn.transform.position = position;
+    //    objectToReturn.transform.rotation = rotation;
 
-        poolDictionary[tag].Enqueue(objectToReturn);
-
-        return objectToReturn;
+    //    return objectToReturn;
 
 
-    }
+    //}
 
 }
