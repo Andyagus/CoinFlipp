@@ -28,8 +28,8 @@ public class ButtonHandler : MonoBehaviour
         bool randomSide = (Random.value > 0.5f);
         lostAlert.SetActive(false);
         wonAlert.SetActive(false);
-        (guess == true ? headsCoin : tailsCoin).SetActive(true);
-        (guess == false ? headsCoin : tailsCoin).SetActive(false);
+        (randomSide == true ? headsCoin : tailsCoin).SetActive(true);
+        (randomSide == false ? headsCoin : tailsCoin).SetActive(false);
 
         var correct = guess == randomSide;
 
