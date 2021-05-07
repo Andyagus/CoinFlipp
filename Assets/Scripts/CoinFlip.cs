@@ -21,6 +21,8 @@ public class CoinFlip : MonoBehaviour
     [SerializeField] Sprite redPanel;
     [SerializeField] Sprite greenPanel;
     ObjectPooler objectPooler;
+    GameObject obj ;
+    private bool listActive = false; 
 
     private void Start()
     {
@@ -31,29 +33,45 @@ public class CoinFlip : MonoBehaviour
 
     public void CloseList()
     {
+        var turnsList = buttonHandlerScript.turnsList;
+
         scrollView.SetActive(false);
         bgBlur.SetActive(false);
-        //ObjectPooler.Instance.SetActive(false);
-        //ObjectPooler.Instance.ReturnToPool("green", transform.position, Quaternion.identity);
+        //obj.SetActive(false);
+
+            ObjectPooler.Instance.ReturnToPool("green", parentPanel.transform.position, Quaternion.identity);
+
+            //ObjectPooler.Instance.gameObject.SetActive(false);
+
+        
+        //ObjectPooler.Instance.ReturnToPool(obj);
+        Debug.Log(gameObject);
+        //gameObject.SetActive(false);
+
     }
 
     public void ListPopulate()
     {
         scrollView.SetActive(true);
         bgBlur.SetActive(true);
-
+        
         var turnsList = buttonHandlerScript.turnsList;
         for (int i = 0; i < turnsList.Count; i++)
         {
             scoreText1.text = ($"#{i+1}");
             var correct = turnsList[i].bet == turnsList[i].cameUp;
             panelImage.sprite = (correct ? greenPanel : redPanel);
-            var obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
+
+            obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
+
             var cameUpSide = obj.transform.GetChild(1);
             var betSide = obj.transform.GetChild(0);
-            obj.transform.SetParent(parentPanel.transform);
+
             betSide.GetChild(turnsList[i].bet == true ? 0 : 1).gameObject.SetActive(true);
-            cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);  
+            cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);
+
+
+
         }
 
     }

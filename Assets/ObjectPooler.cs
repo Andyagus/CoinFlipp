@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
+    private GameObject objectToSpawn;
+    [SerializeField] GameObject parentPanel;
+
+    //private Queue<GameObject> objectPool;
+
     [System.Serializable]
     public class Pool
     {
@@ -36,6 +41,7 @@ public class ObjectPooler : MonoBehaviour
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.imageSprite);
+                obj.transform.SetParent(parentPanel.transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
@@ -48,30 +54,52 @@ public class ObjectPooler : MonoBehaviour
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
+        objectToSpawn = poolDictionary[tag].Dequeue();
 
-        GameObject objectToSpawn = poolDictionary[tag].Dequeue();
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
-    
-        return objectToSpawn;
+
+        if (objectToSpawn.tag == "Untagged")
+        {
+            objectToSpawn.SetActive(true);
+            objectToSpawn.gameObject.tag = "active";
+            objectToSpawn.transform.position = position;
+            objectToSpawn.transform.rotation = rotation;
+
+        }
+
+
+
+        return null;
     }
 
-    internal void SetActive(bool v)
+
+    public void ReturnToPool(string tag, Vector3 position, Quaternion rotation)
+        
     {
-        throw new NotImplementedException();
+        //var visibleObjs = parentPanel.FindGameObjectsWithTag("active");
+
+        //foreach(Transform child in parentPanel.transform)
+        //{
+        //    if (child.tag == "active")
+        //    {
+        //        var children = child.tag = "Untagged";
+
+        //        //children.gameObject.SetActive(false);
+        //    }
+            
+            
+        //}
+        
+        //Debug.Log(visibleObjs);
+        //foreach(GameObject visible in visibleObjs)
+        //{
+        //    visible.transform.position = position;
+        //    visible.transform.rotation = rotation;
+
+        //    visible.SetActive(false);
+        //    Debug.Log(visible);
+        //    visible.gameObject.tag = null;
+
+        //}
     }
-
-    //public GameObject ReturnToPool(string tag, Vector3 position, Quaternion rotation)
-    //{
-    //    GameObject objectToReturn = poolDictionary[tag].Enqueue(objectToReturn);
-    //    objectToReturn.SetActive(false);
-    //    objectToReturn.transform.position = position;
-    //    objectToReturn.transform.rotation = rotation;
-
-    //    return objectToReturn;
-
-
-    //}
 
 }
