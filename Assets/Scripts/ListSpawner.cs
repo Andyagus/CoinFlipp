@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
-public class CoinFlip : MonoBehaviour
+public class ListSpawner : MonoBehaviour
 {
 
     public ButtonHandler buttonHandlerScript;
@@ -26,6 +26,7 @@ public class CoinFlip : MonoBehaviour
 
     private void Start()
     {
+        
         panelImage = panel.GetComponent<Image>();
         var buttonScript = GameObject.FindGameObjectWithTag("ButtonHandler");
         buttonHandlerScript = buttonScript.GetComponent<ButtonHandler>();
@@ -33,20 +34,23 @@ public class CoinFlip : MonoBehaviour
 
     public void CloseList()
     {
-        var turnsList = buttonHandlerScript.turnsList;
+        //var turnsList = buttonHandlerScript.turnsList;
 
         scrollView.SetActive(false);
         bgBlur.SetActive(false);
-        //obj.SetActive(false);
+        //for(int i = 0; i < turnsList.Count; i++)
+        //{
+        //}
+        ObjectPooler.Instance.ReturnToPool(tag: "green");
 
-            ObjectPooler.Instance.ReturnToPool("green", parentPanel.transform.position, Quaternion.identity);
+        //Debug.Log(turnsList.Count);
 
-            //ObjectPooler.Instance.gameObject.SetActive(false);
+    }
 
-        
-        //ObjectPooler.Instance.ReturnToPool(obj);
-        Debug.Log(gameObject);
-        //gameObject.SetActive(false);
+    private void FixedUpdate()
+    {
+        //obj = ObjectPooler.Instance.SpawnFromPool("green", parentPanel.transform.position, Quaternion.identity);
+
 
     }
 
@@ -54,16 +58,27 @@ public class CoinFlip : MonoBehaviour
     {
         scrollView.SetActive(true);
         bgBlur.SetActive(true);
+
+        //if (ObjectPooler.Instance != null) {
+        //    ObjectPooler.Instance.ReturnToPool(tag: "green");
+        //    ObjectPooler.Instance.ReturnToPool(tag: "red");
+        //}
+
+        //if(ObjectPooler.Instance != null)
+        //{
+        //}
         
+
         var turnsList = buttonHandlerScript.turnsList;
         for (int i = 0; i < turnsList.Count; i++)
         {
+
             scoreText1.text = ($"#{i+1}");
             var correct = turnsList[i].bet == turnsList[i].cameUp;
-            panelImage.sprite = (correct ? greenPanel : redPanel);
 
-            obj = ObjectPooler.Instance.SpawnFromPool(correct ? "green" : "red", parentPanel.transform.position, Quaternion.identity);
-
+            obj = ObjectPooler.Instance.SpawnFromPool("green", parentPanel.transform.position, Quaternion.identity);
+            var objImage = obj.GetComponent<Image>();
+            objImage.sprite = correct ? greenPanel : redPanel;
             var cameUpSide = obj.transform.GetChild(1);
             var betSide = obj.transform.GetChild(0);
 
