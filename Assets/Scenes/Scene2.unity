@@ -1796,7 +1796,7 @@ MonoBehaviour:
   - tag: green
     imagePrefab: {fileID: 124282600893107571, guid: 1797a55d7f27a4e39a7ebbf931b1129f,
       type: 3}
-    size: 10
+    size: 126
 --- !u!1 &1198568176
 GameObject:
   m_ObjectHideFlags: 0
