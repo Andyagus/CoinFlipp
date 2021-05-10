@@ -8,7 +8,6 @@ public class ListSpawner : MonoBehaviour
 
     public ButtonHandler buttonHandlerScript;
     [SerializeField] GameObject parentPanel;
-    private Image panelImage;
     [SerializeField] GameObject bgBlur;
     [SerializeField] GameObject scrollView;
     [SerializeField] Sprite newImageSprite;
@@ -54,14 +53,12 @@ public class ListSpawner : MonoBehaviour
             var objImage = obj.GetComponent<Image>();
 
             objImage.sprite = correct ? greenPanel : redPanel;
-            var turnCounter = obj.GetComponentsInChildren<TextMeshProUGUI>();
-            //turnCounter.GetComponent<TextMeshProUGUI>();
+            var turnCounter = obj.GetComponentsInChildren<TextMeshProUGUI>()[2];
             var cameUpSide = obj.transform.GetChild(1);
             var betSide = obj.transform.GetChild(0);
             betSide.GetChild(turnsList[i].bet == true ? 0 : 1).gameObject.SetActive(true);
             cameUpSide.GetChild(turnsList[i].cameUp == true ? 0 : 1).gameObject.SetActive(true);
-          
-            turnCounter[2].text = ($"#{i+1}");
+            turnCounter.text = ($"#{i+1}");
         }
 
     }
